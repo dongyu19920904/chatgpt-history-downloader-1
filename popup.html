@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT 对话保存器</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <div class="header">
+      <h1>ChatGPT 对话保存器</h1>
+      <button id="toggleTheme" class="theme-toggle">
+        <i class="material-icons">light_mode</i>
+      </button>
+    </div>
+    <div class="preview-container">
+      <h2>预览</h2>
+      <div id="preview" class="preview-content"></div>
+    </div>
+    <div class="format-buttons">
+      <button class="btn" id="downloadTxt">
+        <i class="material-icons">description</i>TXT
+      </button>
+      <button class="btn" id="downloadMd">
+        <i class="material-icons">code</i>MD
+      </button>
+      <button class="btn" id="downloadPdf">
+        <i class="material-icons">picture_as_pdf</i>PDF
+      </button>
+    </div>
+    <div id="loading" class="loading-container" style="display: none;">
+      <div class="loading-spinner"></div>
+      <p>正在下载...</p>
+    </div>
+  </div>
+  <script src="lib/jspdf.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
